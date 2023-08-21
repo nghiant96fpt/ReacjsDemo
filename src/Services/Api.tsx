@@ -5,12 +5,13 @@ interface AxiosParams {
   path: string;
   params?: any;
   body?: any;
-  method?: "GET" | "POST";
+  method?: "GET" | "POST" | "DELETE";
 }
 
 const ApiRequest = async (props: AxiosParams) => {
   try {
     const { path, params, body, method = "GET" } = props;
+
     const result = await axios({
       url: path,
       method: method,
@@ -19,6 +20,7 @@ const ApiRequest = async (props: AxiosParams) => {
       data: body,
       headers: {
         "Content-Type": "application/json",
+        "x-api-key": "lEHeaJLm_TKtI1bU",
       },
     });
 

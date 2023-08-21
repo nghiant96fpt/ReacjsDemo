@@ -1,3 +1,3 @@
 export default {
-  BASE_URL: 'https://testapi.io/'
-}
+  BASE_URL: "https://api.shyft.to/",
+};
